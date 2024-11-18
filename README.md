@@ -2,35 +2,6 @@
 
 A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with Next.js,Typescript, Tailwind CSS, and TMDB API.
 
-📂 Project Structure
-
-.
-├── .next                 # Next.js build output
-├── lib                   # Utility functions (if any)
-├── node_modules          # Node dependencies
-├── public                # Public assets (e.g., images, icons)
-├── src
-│   ├── app
-│   │   ├── favourites    # Favourites page
-│   │   │   └── page.tsx
-│   │   ├── movie
-│   │   │   └── [id]      # Dynamic movie details page
-│   │   │       └── page.tsx
-│   │   ├── favicon.ico   # Favicon for the app
-│   │   ├── globals.css   # Global styles
-│   │   ├── layout.tsx    # App layout
-│   │   └── page.tsx      # Homepage
-├── .env.local            # Environment variables (API keys)
-├── .gitignore            # Git ignored files
-├── next-env.d.ts         # TypeScript definitions for Next.js
-├── next.config.js        # Next.js configuration
-├── package.json          # NPM dependencies and scripts
-├── postcss.config.mjs    # PostCSS configuration
-├── README.md             # Project documentation
-├── tailwind.config.ts    # Tailwind CSS configuration
-└── tsconfig.json         # TypeScript configuration
-
-
 
 🚀 Features
 
