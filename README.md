@@ -1,37 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🎬 Movie Library App
 
-First, run the development server:
+A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **TMDB API**.
 
-```bash
+## 📂 Project Structure
+
+
+.
+├── .next                 # Next.js build output
+├── lib                   # Utility functions (if any)
+├── node_modules          # Node dependencies
+├── public                # Public assets (e.g., images, icons)
+├── src
+│   ├── app
+│   │   ├── favourites    # Favourites page
+│   │   │   └── page.tsx
+│   │   ├── movie
+│   │   │   └── [id]      # Dynamic movie details page
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico   # Favicon for the app
+│   │   ├── globals.css   # Global styles
+│   │   ├── layout.tsx    # App layout
+│   │   └── page.tsx      # Homepage
+├── .env.local            # Environment variables (API keys)
+├── .gitignore            # Git ignored files
+├── next-env.d.ts         # TypeScript definitions for Next.js
+├── next.config.js        # Next.js configuration
+├── package.json          # NPM dependencies and scripts
+├── postcss.config.mjs    # PostCSS configuration
+├── README.md             # Project documentation
+├── tailwind.config.ts    # Tailwind CSS configuration
+└── tsconfig.json         # TypeScript configuration
+
+
+
+
+Based on the file structure shown in the image you provided, I'll generate a complete README.md document for your project. This will include instructions for setup, running the application, code structure, and an explanation of design decisions and trade-offs.
+
+README.md
+markdown
+Copy code
+# 🎬 Movie Library App
+
+A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **TMDB API**.
+
+## 📂 Project Structure
+
+```plaintext
+.
+├── .next                 # Next.js build output
+├── lib                   # Utility functions (if any)
+├── node_modules          # Node dependencies
+├── public                # Public assets (e.g., images, icons)
+├── src
+│   ├── app
+│   │   ├── favourites    # Favourites page
+│   │   │   └── page.tsx
+│   │   ├── movie
+│   │   │   └── [id]      # Dynamic movie details page
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico   # Favicon for the app
+│   │   ├── globals.css   # Global styles
+│   │   ├── layout.tsx    # App layout
+│   │   └── page.tsx      # Homepage
+├── .env.local            # Environment variables (API keys)
+├── .gitignore            # Git ignored files
+├── next-env.d.ts         # TypeScript definitions for Next.js
+├── next.config.js        # Next.js configuration
+├── package.json          # NPM dependencies and scripts
+├── postcss.config.mjs    # PostCSS configuration
+├── README.md             # Project documentation
+├── tailwind.config.ts    # Tailwind CSS configuration
+└── tsconfig.json         # TypeScript configuration
+
+
+
+🚀 Features
+
+🎥 Browse popular movies using the TMDB API
+🔍 Search for movies by title
+📜 View detailed movie information on a separate page
+⭐ Save favorite movies to a dedicated page
+⚡ Infinite scrolling for the homepage movie grid
+📱 Fully responsive design with Tailwind CSS
+
+
+🛠️ Tech Stack
+
+Next.js: Framework for server-rendered React applications
+TypeScript: Type-safe JavaScript for enhanced code quality
+Tailwind CSS: Utility-first CSS framework for rapid UI development
+TMDB API: Provides access to a database of movies
+
+🖥️ Getting Started
+
+1. Clone the Repository
+
+git clone https://github.com/skizziedevs/movie-app.git
+cd movie-library
+
+2. Install Dependencies
+
+npm install
+
+3. Set Up Environment Variables
+Create a .env.local file in the root directory and add your TMDB API key:
+NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key_here
+
+4. Run the Development Server: 
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app will be available at http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Build for Production:
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✨ Design Decisions and Trade-offs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Technology Stack
+   - **Next.js** was chosen for its efficient server-side rendering (SSR) and routing capabilities, improving page load times and SEO.
+   - **TypeScript** ensures type safety, reducing bugs and enhancing maintainability.
+   - **Tailwind CSS** was used for rapid UI development, resulting in a clean and consistent design.
 
-## Learn More
+2. **Infinite Scrolling**
+   - Implemented on the homepage to enhance user experience by loading more movies as users scroll.
+   - **Trade-off**: Increases data fetches, which can impact performance, but improves engagement for users exploring movie lists.
 
-To learn more about Next.js, take a look at the following resources:
+3. **Dynamic Routing**
+   - Utilized for the movie detail page (`/movie/[id]`), making URLs clean and SEO-friendly.
+   - **Trade-off**: Requires extra API calls for each dynamic page but improves scalability and modularity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Component-based Structure**
+   - Extracted reusable components like `MovieCard` and `SearchBar` to promote code reuse and scalability.
+   - **Trade-off**: Slightly increases initial development time but results in easier future maintenance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **API Data Fetching**
+   - Used client-side fetching with `fetch` for simplicity and quick data retrieval.
+   - **Trade-off**: Dependent on user's network speed, which may cause slower loading on weaker connections.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# movie-app" 
+These design decisions were made to prioritize performance, scalability, and a smooth user experience.
