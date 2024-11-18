@@ -1,52 +1,9 @@
+🎬 Movie Library App
 
-# 🎬 Movie Library App
+A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with Next.js,Typescript, Tailwind CSS, and TMDB API.
 
-A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **TMDB API**.
+📂 Project Structure
 
-## 📂 Project Structure
-
-
-.
-├── .next                 # Next.js build output
-├── lib                   # Utility functions (if any)
-├── node_modules          # Node dependencies
-├── public                # Public assets (e.g., images, icons)
-├── src
-│   ├── app
-│   │   ├── favourites    # Favourites page
-│   │   │   └── page.tsx
-│   │   ├── movie
-│   │   │   └── [id]      # Dynamic movie details page
-│   │   │       └── page.tsx
-│   │   ├── favicon.ico   # Favicon for the app
-│   │   ├── globals.css   # Global styles
-│   │   ├── layout.tsx    # App layout
-│   │   └── page.tsx      # Homepage
-├── .env.local            # Environment variables (API keys)
-├── .gitignore            # Git ignored files
-├── next-env.d.ts         # TypeScript definitions for Next.js
-├── next.config.js        # Next.js configuration
-├── package.json          # NPM dependencies and scripts
-├── postcss.config.mjs    # PostCSS configuration
-├── README.md             # Project documentation
-├── tailwind.config.ts    # Tailwind CSS configuration
-└── tsconfig.json         # TypeScript configuration
-
-
-
-
-Based on the file structure shown in the image you provided, I'll generate a complete README.md document for your project. This will include instructions for setup, running the application, code structure, and an explanation of design decisions and trade-offs.
-
-README.md
-markdown
-Copy code
-# 🎬 Movie Library App
-
-A web application that allows users to explore popular movies, view detailed information, and search for their favorite films. Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **TMDB API**.
-
-## 📂 Project Structure
-
-```plaintext
 .
 ├── .next                 # Next.js build output
 ├── lib                   # Utility functions (if any)
